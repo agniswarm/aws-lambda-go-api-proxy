@@ -109,6 +109,6 @@ func (r *ProxyResponseWriter) GetProxyResponse() (events.APIGatewayProxyResponse
 		StatusCode:        r.status,
 		MultiValueHeaders: http.Header(r.headers),
 		Body:              output,
-		IsBase64Encoded:   isBase64,
+		IsBase64Encoded:   false,
 	}, nil
 }
